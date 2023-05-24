@@ -9,12 +9,12 @@ const app = express();
 app.use(express.json());
 
 //Läs in produkter från JSON till databasen (görs en gång)
-function importProducts(products) {
-  products.forEach((product) => {
-    productDatabase.insert(product);
-  });
-}
-importProducts(products);
+// function importProducts(products) {
+//   products.forEach((product) => {
+//     productDatabase.insert(product);
+//   });
+// }
+// importProducts(products);
 
 // Hämta produkter från databas
 app.get("/products", async (request, response) => {
